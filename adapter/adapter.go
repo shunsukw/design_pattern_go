@@ -2,6 +2,7 @@ package main
 
 import "fmt"
 
+// Adaptee
 type Banner struct {
 	String string
 }
@@ -14,6 +15,7 @@ func (banner *Banner) showWithAster() {
 	fmt.Println("*", banner.String, "*")
 }
 
+// Adapter
 // インターフェイス
 // 実装するのはPrintBanner構造体
 type Print interface {
@@ -39,6 +41,7 @@ func NewPrintBanner(str string) *PrintBanner {
 	}
 }
 
+// この場合、main関数がAdapterのClient となる
 func main() {
 	p := NewPrintBanner("サンプル")
 
