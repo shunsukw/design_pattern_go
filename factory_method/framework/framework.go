@@ -4,6 +4,8 @@ type Product interface {
 	Use() string
 }
 
+// FactoryとfactoryInterfaceの関係はJavaでいうならば一つのクラスにまとめられる
+// つまり、Createメソッドと二つの抽象メソッドをもつクラスである
 type Factory struct {
 }
 
