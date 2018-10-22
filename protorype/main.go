@@ -2,11 +2,13 @@ package main
 
 import "fmt"
 
+// Product ...
 type Product interface {
 	createClone() Product
 	use(s string)
 }
 
+// Manager ...
 type Manager struct {
 	showcase map[string]Product
 }
@@ -20,7 +22,7 @@ func (m *Manager) create(protoname string) Product {
 	return p.createClone()
 }
 
-// MessageBox構造体はProduct インターフェイスを実装する
+// MessageBox 構造体はProduct インターフェイスを実装する
 type MessageBox struct {
 	decochar string
 }
@@ -44,7 +46,7 @@ func (mb *MessageBox) createClone() Product {
 	}
 }
 
-// UnderlinePen構造体はProductインターフェイスを実装する
+// UnderlinePen 構造体はProductインターフェイスを実装する
 type UnderlinePen struct {
 	ulchar string
 }
