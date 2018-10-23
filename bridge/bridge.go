@@ -3,6 +3,7 @@ package main
 import "fmt"
 
 // 機能のクラス階層 ---------------
+
 type Display struct {
 	impl DisplayImpl
 }
@@ -32,6 +33,7 @@ func (cd CountDisplay) multiDisplay(times int) {
 }
 
 // 実装のクラス階層 ---------------
+
 type DisplayImpl interface {
 	rawOpen()
 	rawPrint()
