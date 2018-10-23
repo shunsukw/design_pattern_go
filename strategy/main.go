@@ -31,6 +31,7 @@ func init() {
 	}
 }
 
+// handクラスの役割
 type hand struct {
 	handValue int
 }
@@ -63,6 +64,7 @@ type Strategy interface {
 	study(win bool)
 }
 
+// Strategyの具象クラス1
 type WinningStrategy struct {
 	won      bool
 	prevHand *hand
@@ -83,6 +85,11 @@ func (ws *WinningStrategy) NextHand() *hand {
 
 func (ws *WinningStrategy) study(win bool) {
 	ws.won = win
+}
+
+// Strategyの具象クラス2
+type ProbStrategy struct {
+	// 実装省略
 }
 
 // Playerクラス ストラテジーデザインパターンおけるContextの役割
